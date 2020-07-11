@@ -48,7 +48,7 @@ public class TestTriangulo {
    	}
     
     @Test
-   	public void shouldGetTipoInValido() {
+   	public void shouldGetTipoInvalido() {
    		
    		Triangulo triangulo = new Triangulo();
    		

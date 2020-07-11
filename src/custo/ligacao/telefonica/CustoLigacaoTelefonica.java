@@ -37,9 +37,9 @@ public class CustoLigacaoTelefonica {
 			custoChamada = custoChamada -  ligacao.getMinutos() *1;
 		}
 		
-		if(ligacao.getDia().equals("Saturday") || ligacao.getDia().equals("Sunday") ) {
-			custoChamada = custoChamada -  ligacao.getMinutos() *1;
-		}
+	//	if(ligacao.getDia() == 6  || ligacao.getDia() == 7 ) {
+		//	custoChamada = custoChamada -  ligacao.getMinutos() *1;
+	//	}
 		
 		
 		

@@ -1,12 +1,15 @@
 package custo.ligacao.telefonica;
 
+import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.Locale;
 
 public class Ligacao {
 
-	private double minutos;
+	private long minutos;
 	private int codigoDDDOrigem;
 	private int codigoDDDDestino;
 	private boolean chamadaLocal;
@@ -22,7 +25,7 @@ public class Ligacao {
 				int distancia,
 				Date data) {
 		
-		this.minutos = minutos;
+		this.minutos = (long) Math.round(minutos);
 		this.codigoDDDOrigem = codigoDDDOrigem;
 		this.codigoDDDDestino = codigoDDDDestino;
 		this.chamadaLocal = chamadaLocal;
@@ -51,11 +54,8 @@ public class Ligacao {
 	
 	public String getDia() {
 	
-        SimpleDateFormat simpleDateformat = new SimpleDateFormat("EEEE"); // the day of the week spelled out completely
-        String dia = simpleDateformat.format(data);
-        
-        return dia;
-      
+		DateFormat formatter = new SimpleDateFormat("EEEE", Locale.ENGLISH);
+	    return formatter.format(data);
 	}
 	
 	
